@@ -1,17 +1,26 @@
 window.onload = () =>{
     console.log("connected")
-    let headerSearchIcon = document.getElementById("header_search-icon")
-    let searchBar = document.getElementById("header_search")
-    let searchBarClose = document.getElementById("header_search-close")
-    let header = document.getElementById("header-right")
+    const headerSearchIcon = document.getElementById("header_search-icon")
+    const searchBar = document.getElementById("header_search")
+    const searchBarClose = document.getElementById("header_search-close")
+    const header = document.getElementById("header-right")
 
-    headerSearchIcon.onclick = () =>{
-        searchBar.classList.toggle("__search_active")
-        header.classList.toggle("__hide_header")
+    const menuBtn = document.getElementById("menu-btn")
+    const burgerMenu = document.getElementById("burger")
+    //
+    // headerSearchIcon.onclick = () =>{
+    //     searchBar.classList.toggle("__search_active")
+    //     header.classList.toggle("__hide_header")
+    // }
+    // searchBarClose.onclick = () =>{
+    //     searchBar.classList.toggle("__search_active")
+    //     header.classList.toggle("__hide_header")
+    // }
+
+    menuBtn.onclick = () => {
+        menuBtn.classList.toggle("open")
+        burgerMenu.classList.toggle("__open_burger")
     }
-    searchBarClose.onclick = () =>{
-        searchBar.classList.toggle("__search_active")
-        header.classList.toggle("__hide_header")
-    }
+
 
 }
