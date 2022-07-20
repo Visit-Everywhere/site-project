@@ -385,9 +385,34 @@ h1, h2, h3, h4, p, body, html{margin: 0;padding: 0;}
     width: 100%;
 }
 .container{
-    max-width: 950px;
+    max-width: 1220px;
     margin: 0 auto;
+    padding: 0 20px;
 }
+::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(160, 160, 160);
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
 /* Header
    ========================================================================== */
 .__hide_header{
@@ -468,6 +493,10 @@ h1, h2, h3, h4, p, body, html{margin: 0;padding: 0;}
     height: 30px;
     margin: auto 0;
 }
+.header-logo{
+    margin-left: 60px !important;
+}
+
 .header-right{
     margin: auto 0;
     height: 35px;
@@ -481,7 +510,7 @@ h1, h2, h3, h4, p, body, html{margin: 0;padding: 0;}
 }
 
 .header-nav{
-    margin: auto 60px;
+    margin: auto 90px auto 40px;
     display: flex;
     justify-content: start;
     max-height: 15px;
@@ -489,7 +518,7 @@ h1, h2, h3, h4, p, body, html{margin: 0;padding: 0;}
 .header-nav-link{
     text-decoration: none;
     color: white;
-    margin-left: 25px;
+    margin-left: 45px;
 }
 .header-nav-link:first-child{
     margin-left: 0;
@@ -658,9 +687,11 @@ h1, h2, h3, h4, p, body, html{margin: 0;padding: 0;}
 /* Footer
    ========================================================================== */
 .footer{
+    margin: 0 auto;
+    max-width: 1200px;
     margin-top: 90px;
     background-color: #2E2E2E;
-    height: 270px;
+    height: 250px;
     border-radius: 25px 25px 0 0;
     display: block;
 }
@@ -764,10 +795,11 @@ h1, h2, h3, h4, p, body, html{margin: 0;padding: 0;}
 
 
 .mobile_footer{
+    margin: 0 auto;
+    width: 100%;
     display: none;
     margin-top: 70px;
     background-color: #2E2E2E;
-    height: 270px;
     border-radius: 25px 25px 0 0;
 }
 .mobile_footer-top{
@@ -849,6 +881,7 @@ h1, h2, h3, h4, p, body, html{margin: 0;padding: 0;}
 }
 
 .mobile_footer-bot-text{
+    margin-top: 20px;
     background-color: #000;
     color: #fff;
     font-weight: 500;
@@ -875,6 +908,10 @@ h1, h2, h3, h4, p, body, html{margin: 0;padding: 0;}
     }
     .menu-btn{
         display: block;
+    }
+
+    .header-logo{
+        margin-left: 0 !important;
     }
 }
 @media screen and (max-width: 350px){
