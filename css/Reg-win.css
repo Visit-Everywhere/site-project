@@ -1,0 +1,136 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url("/fonts/bootstrap/glyphicons-halflings-regular.eot");
+    src: url("/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+}  
+.registration-box{
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%, 0);
+    border-radius:1px ;
+    position: absolute;
+    width: 1111px;
+    height: 624px;
+    background: #4A4A4A;
+    box-shadow: 5px 5px 18px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 48px;
+}
+.header-registration-row-label{
+    position: absolute;
+    width: 263px;
+    height: 53px;
+    left: 39px;
+    top: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 53px;
+    
+    color: #FFFFFF;
+}
+.header-registration-row-label::after{
+    margin: 7px 0 0 15px;
+    content: "";
+    display: block;
+    max-width: 180px;
+    width: min(180px, 50%);
+    height: 4px;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+}
+.google-icon{
+    position: absolute;
+    top: 27px;
+    background: #E3E3E3;
+    left: 385px;
+    height: 35px;
+    width: 35px;
+}
+.iphone-icon{
+    position: absolute;
+    top: 24px;
+    left: 459px;
+    background: #E3E3E3;
+    height: 35px;
+    width: 35px;
+}
